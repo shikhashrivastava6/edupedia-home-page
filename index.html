@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="shortcut icon" href="img/brandlogo.png" type="image/x-icon">
+    <!-- animation.css link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css" />
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="css/landing_page.css">
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+  <!-- Header start  -->
+  <nav class="navbar navbar-light">
+    <div class="container-fluid">
+      <img src="img/brandlogo.png" class="wow infinite flipInX" data-wow-duration="5s" alt="" srcset="">
+    </div>
+  </nav>
+  <!-- Header End -->
+<!-- ---------------------------------------------------------- -->
+  <!-- home section start -->
+
+  <div class="home mb-10">
+    <div class="row g-7">
+      <div class="left-content col-md-7">
+        <div class="home-body">
+          <h5 class="home-title wow bounce" data-wow-duration="2s">Edupedia </h5>
+          <h4 class="home-title-disc wow infinite zoomIn" data-wow-duration="10s">The Educational Hub</h4>
+          <p class="home-text" data-wow-duration="6s">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+         <button type="button" class="btn wow infinite pulse " data-wow-duration="3s" id="SignUp" data-bs-toggle="modal" data-bs-target="#SignUpModal"><i class="bi bi-person-plus"></i> Sign Up</button>
+         <button type="button" class="btn wow infinite pulse" data-wow-duration="3s" id="SignIn" data-bs-toggle="modal" data-bs-target="#SignInModal"><i class="bi bi-key"></i> Sign In</button>
+        </div>
+      </div>
+      <div class="right-content col-md-5">
+        <img src="img/p8.png" class="img-fluid wow rotateInDownRight" data-wow-duration="2s" alt="...">
+      </div>
+    </div>
+  </div>
+
+  <!-- modal for Sign Up and Sign In form start -->
+
+   <!-- Modal Sign Up Start-->
+<div class="modal fade" id="SignUpModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="button-box">
+        <div id="utn"></div>
+        <button type="button" class="toggle-btn" id="SignUpBtn">Sign Up</button>
+        <button type="button" class="toggle-btn" id="SignInBtn" data-bs-toggle="modal" data-bs-target="#SignInModal">Sign In</button>
+      </div>
+        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+      <div class="modal-body">
+        <div class="social-icons">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-twitter"></i></a>
+          <a href="#"><i class="bi bi-google"></i></a>
+      </div>
+    <form action=""  id="Sign-Up">
+      
+      <div class="form-floating mb-3">
+        <div class="row mb-3">
+          <label for="inputtext3" class="col-sm-1 col-form-label"><i class="bi bi-person-plus-fill"></i></label>
+          <div class="col-sm-10 form-floating">
+        <input type="text" class="form-control" id="floatingInput-Name" placeholder="name@example.com">
+        <label for="floatingInput-Name">&nbsp; Username</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-floating mb-3">
+        <div class="row mb-3">
+          <label for="inputEmail3" class="col-sm-1 col-form-label"><i class="bi bi-envelope-fill"></i></label>
+          <div class="col-sm-10 form-floating">
+        <input type="email" class="form-control" id="floatingInput-Email" placeholder="name@example.com">
+        <label for="floatingInput-Email">&nbsp; Email address</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-floating mb-3">
+        <div class="row mb-3">
+          <label for="inputPassword3" class="col-sm-1 col-form-label"><i class="bi bi-lock-fill"></i></label>
+          <div class="col-sm-10 form-floating">
+        <input type="email" class="form-control" id="floatingInput-password" placeholder="name@example.com">
+        <label for="floatingInput-password">&nbsp; Password</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          you agree to our <a href="#">terms & conditions</a>
+        </label>
+      </div>
+      <button type="submit" class="btn">Sign Up</button>
+       <p>Already have an account?<a href="#SignInModal" data-bs-target="#SignInModal" data-bs-toggle="modal">Sign In</a></p>
+    </form>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- Modal Sign Up end  -->
+<!-- Modal Sign In start  -->
+  <div class="modal fade" id="SignInModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="button-box">
+          <div id="itn"></div>
+          <button type="button" class="toggle-btn" onclick="SignIn()" id="SignUpBtn1" data-bs-toggle="modal" data-bs-target="#SignUpModal">Sign Up</button>
+          <button type="button" class="toggle-btn" onclick="SignUp()" id="SignInBtn1" data-bs-toggle="modal" data-bs-target="#SignInModal">Sign In</button>
+
+        </div>
+          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+        <div class="modal-body">
+          <div class="social-icons">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-google"></i></a>
+        </div>
+      <form action=" "  id="Sign-In">
+        
+        <div class="form-floating mb-3">
+          <div class="row mb-3">
+            <label for="inputEmail3" class="col-sm-1 col-form-label"><i class="bi bi-envelope-fill"></i></label>
+            <div class="col-sm-10 form-floating">
+          <input type="email" class="form-control" id="floatingInput--Email" placeholder="name@example.com" required>
+          <label for="floatingInput-Email">&nbsp; Email address</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-floating mb-3">
+          <div class="row mb-3">
+            <label for="inputPassword3" class="col-sm-1 col-form-label"><i class="bi bi-lock-fill"></i></label>
+            <div class="col-sm-10 form-floating">
+          <input type="email" class="form-control" id="floatingInput-password1" placeholder="name@example.com" required>
+          <label for="floatingInput-password">&nbsp; Password</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1" required>
+          <label class="form-check-label" for="flexCheckDefault1">
+            you agree to our <a href="#">terms & conditions</a>
+          </label>
+        </div>
+        <button type="submit" class="btn">Sign In</button>
+        <a href="#" data-bs-toggle="modal" data-bs-target="#reset-Modal"><span>forgot</span> password </a><br>
+        <a href="#resendLinkModal" class="resend-link" data-bs-target="#resendLinkModal" data-bs-toggle="modal"> Resend Varification Email?</a> 
+        <p>Don't have an account? <a href="#SignUpModal" data-bs-target="#SignUpModal" data-bs-toggle="modal"> Sign Up</a></p>
+      </form>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Modal Sign In end  -->
+<!-- Modal forgot password start -->
+<div class="modal fade" id="reset-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="button-box-r">
+        <div id="rtn"></div>
+        <button type="button" class="toggle-btn-r" onclick="SignIn()" id="SignUpBtn2" data-bs-toggle="modal" data-bs-target="#SignUpModal">Sign Up</button>
+
+      </div>
+        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+      <div class="modal-body">
+        <div class="social-icons">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-twitter"></i></a>
+          <a href="#"><i class="bi bi-google"></i></a>
+      </div>
+    <form action="" id="forgot-password">
+      
+      <div class="form-floating mb-3">
+        <div class="row mb-3">
+          <label for="inputEmail3" class="col-sm-1 col-form-label"><i class="bi bi-envelope-fill"></i></label>
+          <div class="col-sm-10 form-floating">
+        <input type="email" class="form-control" id="floatingInput---Email" placeholder="name@example.com" required>
+        <label for="floatingInput-Email">&nbsp; Email address</label>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn">Reset Password</button>
+      <a href="#resendLinkModal" data-bs-target="#resendLinkModal" data-bs-toggle="modal"> Resend Varification Email?</a>
+          </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal forgot password end -->
+<!-- Modal resend varification link start -->
+<div class="modal fade" id="resendLinkModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="button-box">
+        <div id="ltn"></div>
+        <button type="button" class="toggle-btn" onclick="SignIn()" id="SignUpBtn3" data-bs-toggle="modal" data-bs-target="#SignUpModal">Sign Up</button>
+        <button type="button" class="toggle-btn" onclick="SignUp()" id="SignInBtn3" data-bs-toggle="modal" data-bs-target="#SignInModal">Sign In</button>
+
+      </div>
+        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+      <div class="modal-body">
+        <div class="social-icons">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-twitter"></i></a>
+          <a href="#"><i class="bi bi-google"></i></a>
+      </div>
+    <form action=" "  id="Sign-In">
+      
+      <div class="form-floating mb-3">
+        <div class="row mb-3">
+          <label for="inputEmail3" class="col-sm-1 col-form-label"><i class="bi bi-envelope-fill"></i></label>
+          <div class="col-sm-10 form-floating">
+        <input type="email" class="form-control" id="floatingInput----Email" placeholder="name@example.com" required>
+        <label for="floatingInput----Email">&nbsp; Email address</label>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn">resend link</button>
+    </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal resend varification link end -->
+<!-- -  -->
+  <!-- modal for Sign Up and Sign In form end -->
+
+  <!-- home section end -->
+<!-- ---------------------------------------------------------  -->
+   <!-- coder section start -->
+   <div class="coder mb-10">
+    <div class="row g-7">
+      <div class="s-right-content col-md-5">
+        <img src="img/p2.png" class="wow fadeInLeft" data-wow-duration="3s" alt="...">
+      </div>
+
+      <div class="s-left-content col-md-7">
+        <div class="shadow-lg p-3 mb-5 bg-body rounded wow fadeInRight data-wow-duration=2s" style="width: 35rem;">
+        <div class="coder-body">
+          <h4 class="coder-title even">Coder's Club</h4>
+          <p class="coder-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam numquam atque eum dolorem ex facilis est et autem blanditiis illum deserunt quos mollitia quisquam, veniam praesentium sapiente laudantium sunt debitis. This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <button type="button" class="section-btn-even wow pulse" data-wow-duration="1s" data-wow-delay="2s" data-bs-toggle="modal" data-bs-target="#SignUpModal">learn more</button>
+       </div>
+      </div>
+     </div>
+    </div>
+  </div>
+  <!-- coder section end -->
+  <!-- ------------------------------------------------------------------- -->
+  <!-- resource section start -->
+  <div class="resource mb-10">
+    <div class="row g-7">
+      <div class="s-left-content col-md-7">
+        <div class="shadow-lg p-3 mb-5 bg-body rounded wow fadeInLeft data-wow-duration=3s" style="width: 35rem;">
+        <div class="resource-body">
+          <h4 class="resource-title odd">Resource</h4>
+          <p class="resource-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellendus quidem ipsa voluptatem delectus earum consectetur, voluptatum architecto nisi suscipit incidunt ullam aliquam voluptate. Molestiae ipsam hic eaque quidem vel.
+            This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <button type="button" class="section-btn-odd wow pulse" data-wow-duration="1s" data-wow-delay="2s">learn more</button>
+        </div>
+      </div>
+      </div>
+      <div class="s-right-content col-md-5">
+        <img src="img/port4.png" class="img-fluid wow fadeInRight data-wow-duration=3s" alt="...">
+      </div>
+    </div>
+  </div>
+  <!-- resource section end -->
+  <!-- -----------------------------------------------------------  -->
+  <!--event mania section  start -->
+  <div class="mania mb-10">
+    <div class="row g-7">
+      <div class="s-right-content col-md-5">
+        <img src="img/p7.png" class="wow fadeInLeft" data-wow-duration="3s" alt="...">
+      </div>
+
+      <div class="s-left-content col-md-7">
+        <div class="shadow-lg p-3 mb-5 bg-body rounded wow fadeInRight" data-wow-duration="3s" style="width: 35rem;">
+        <div class="mania-body">
+          <h4 class="mania-title even">Event mania</h4>
+          <p class="mania-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, ut debitis officia, obcaecati, esse saepe natus cum provident porro facere facilis? Sint quas voluptas necessitatibus sed, qui sit quisquam quis.
+            This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <button type="button" class="section-btn-even wow pulse" data-wow-duration="1s" data-wow-delay="2s" data-bs-toggle="modal" data-bs-target="#SignUpModal">learn more</button>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <!--event mania section  end -->
+  <!-- -----------------------------------------------------------  -->
+  <!-- communities section start -->
+  <div class="communities mb-10 container">
+    <div class="row g-7">
+      <div class="s-left-content col-md-7">
+        <div class="shadow-lg p-3 mb-5 bg-body rounded wow fadeInLeft" data-wow-duration="3s" style="width: 35rem;">
+        <div class="communities-body">
+          <h4 class="communities-title odd">communities</h4>
+          <p class="communities-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nesciunt enim culpa? Sed facere earum facilis, quasi labore quam velit officiis nostrum laborum adipisci consequatur mollitia recusandae totam saepe temporibus?
+            This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <button type="button" class="section-btn-odd wow pulse" data-wow-duration="1s" data-wow-delay="2s" data-bs-toggle="modal" data-bs-target="#SignUpModal">learn more</button>
+        </div>
+      </div>
+      </div>
+      <div class="s-right-content col-md-5">
+        <img src="img/p3.png" class="img-fluid wow fadeInRight" data-wow-duration="3s" alt="...">
+      </div>
+    </div>
+  </div>
+  <!-- communities section end -->
+  <!-- -----------------------------------------------------------  -->
+  <!-- Build connection section start -->
+  <div class="connection mb-10 container">
+    <div class="row g-7">
+      <div class="s-right-content col-md-5">
+        <img src="img/p6.png" class="img-fluid wow fadeInLeft" data-wow-duration="3s" alt="...">
+      </div>
+
+      <div class="s-left-content col-md-7">
+        <div class="shadow-lg p-3 mb-5 bg-body rounded wow bounceInRight" data-wow-duration="3s" style="width: 35rem;">
+        <div class="connection-body">
+          <h4 class="connection-title even">Build connection</h4>
+          <p class="connection-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum enim nulla animi expedita rem debitis illum alias dolorum architecto quaerat molestias modi molestiae ipsum tempora nam, possimus aperiam natus nemo?
+            This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <button type="button" class="section-btn-even wow pulse" data-wow-duration="1s" data-wow-delay="2s" data-bs-toggle="modal" data-bs-target="#SignUpModal">learn more</button>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <!-- Build connection section end -->
+  <!-- -----------------------------------------------------------  -->
+  <!-- about section start -->
+  <div class="about mb-10">
+    <div class="row g-7">
+      <div class="s-left-content col-md-7">
+        <div class="shadow-lg p-3 mb-5 bg-body rounded wow bounceInLeft" data-wow-duration="3s" style="width: 35rem;">
+        <div class="about-body">
+          <h4 class="about-title odd">About</h4>
+          <p class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nemo, voluptatibus nesciunt commodi architecto officia, animi laboriosam magnam accusamus corporis, ipsam voluptates alias est eum nobis tenetur optio voluptas nam! This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <button type="button" class="section-btn-odd wow pulse" data-wow-duration="1s" data-wow-delay="2s">learn more</button>
+        </div>
+      </div>
+      </div>
+      <div class="s-right-content col-md-5">
+        <img src="img/h9.png" class="img-fluid wow fadeInRight" alt="...">
+      </div>
+    </div>
+  </div>
+  <!-- about section end -->
+  <!-- -----------------------------------------------------------  -->
+  <!-- review section start -->
+  
+  <!-- review section end -->
+  <!-- -----------------------------------------------------------  -->
+  <!-- contact section start -->
+  <h5 class="contact-heading" data-wow-duration="3s">Contact <span>Us</span></h5>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card border-0" data-wow-duration="5s">
+        <div class="card-body">
+          <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.5579617648064!2d75.88997461424212!3d22.595630337820953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fb59ad0a91bf%3A0x2bfb1b5e0875879b!2sSwami%20Vivekanand%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1643444646184!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card border-0 wow" data-wow-duration="5s">
+        <div class="card-body form">
+          <h5 class="card-title">get in <span>touch</span></h5>
+          <form action="" method="" class="contact-form">
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="username" placeholder="Klaus Michelson">
+              <label for="username">Username</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="userEmail" placeholder="klaus@example.com">
+              <label for="userEmail">Email address</label>
+            </div>
+            <div class="form-floating">
+              <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+              <label for="floatingTextarea2">Comments</label>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+          
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- contact section end -->
+  <!-- -----------------------------------------------------------  -->
+  <!-- footer section start -->
+  <div class="position-absolute bottom-fixed footer">
+    <div class="share">
+      <a href="#" class="animated bounce"><i class="bi bi-facebook"></i></a>
+      <a href="#"><i class="bi bi-github"></i></a>
+      <a href="#"><i class="bi bi-twitter"></i></a>
+      <a href="#"><i class="bi bi-google"></i></a>
+      <a href="#"><i class="bi bi-linkedin"></i></a>
+      <a href="#"><i class="bi bi-pinterest"></i></a> 
+  </div>
+  <div class="credit"> all right reserved</div>
+
+  </div>
+  <!-- footer section end -->
+  <!-- -----------------------------------------------------------  -->
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+ integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" 
+ crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+              <script>
+              new WOW().init();
+              </script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</html>
